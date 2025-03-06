@@ -1,0 +1,2 @@
+URL = 'https://qa-mesto.praktikum-services.ru/api/cards'
+TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2M5ODVjNmQ3MjkyYTAwM2RmMjkxNmMiLCJpYXQiOjE3NDEyNjM3MzgsImV4cCI6MTc0MTg2ODUzOH0.9XTgqHBbbA6LGULpHL-zCqpNAGWgyF78z0vzoIh25J4'
