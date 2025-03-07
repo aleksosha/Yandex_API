@@ -1,7 +1,11 @@
 import requests
-from Locators.locators import URL, TOKEN
+from Locators.locators import URL_CARDS, TOKEN
 
-response = requests.post(URL, data={
-    'name': 'Красивое место',
-    'link': 'https://code.s3.yandex.net/qa-automation-engineer/python/files/photoSelenide.jpeg'}, headers={'Authorization': TOKEN})
+#выносим аргументы
+payload = {"name": "Mesto",
+            'link': 'https://code.s3.yandex.net/qa-automation-engineer/python/files/photoSelenide.jpeg'}
+response = requests.post(URL_CARDS, data=payload,
+                         headers={'Authorization': TOKEN})
 print(response.status_code)
+#десериализация
+print(response.json()['data'])

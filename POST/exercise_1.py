@@ -1,6 +1,7 @@
 import requests
+from Locators.locators import URL_SIGNUP
 
-payload = {"email": "drobotunaleksandragen12@yandex.ru", 'password': "drobotun123"}
-response = requests.post('https://qa-mesto.praktikum-services.ru/api/signup', data=payload)
+payload = {'email': 'lolkekreb@yandex.ru', 'password': 'qwerty'}
+response = requests.post(URL_SIGNUP, data=payload)
 print(response.status_code)
 print(response.json())

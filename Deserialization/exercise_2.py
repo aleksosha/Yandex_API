@@ -1,12 +1,11 @@
 import requests
-from Locators.locators import URL, TOKEN
+from Locators.locators import URL_ME, TOKEN, EMAIL
 
 def test_email_name():
-   response = requests.get('https://qa-mesto.praktikum-services.ru/api/users/me', headers={'Authorization':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2M5ODVjNmQ3MjkyYTAwM2RmMjkxNmMiLCJpYXQiOjE3NDEyNjM3MzgsImV4cCI6MTc0MTg2ODUzOH0.9XTgqHBbbA6LGULpHL-zCqpNAGWgyF78z0vzoIh25J4'})
-   print(response.status_code)
+   response = requests.get(URL_ME, headers={'Authorization': TOKEN})
    r = response.json()
-   result = r["data"].get('email')
-   print(result)
-   assert 'drobotunalexandra12345@yandex.ru' == r['data']['email']
+   print(r)
+   print(response.status_code)
+   assert 'drobotunaleksandragen12@yandex.ru' == r['data']['email']
 
-test_email_name()
+#test_email_name()
